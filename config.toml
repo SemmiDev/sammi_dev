@@ -1,3 +1,43 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "sammi_dev"
+baseURL = "https://sammidev.netlify.app/"
+theme = "researcher"
+disableKinds = ["taxonomy", "term"]
+enableEmoji = true
+math = false          # enable KaTeX (https://katex.org/) globally
+googleAnalytics = ""  # add your tracking id
+
+[params]
+  author = "Sammi Aldhi Yanto"
+  description = "Sofware Engineer"
+  favicon = "favicon.ico"  # path to a .ico to use as favicon
+  logo = ""  # url or path to a logo to put in the header
+  [params.footer]
+    text = "Sammi Aldhi Yanto | 2021"
+    url = "https://github.com/SemmiDev/"
+  [params.style]  # appearance options (can be omitted)
+    fontFamily = "Inconsolata"
+    pageWidth = "750px"
+    avatarSize = "90px"
+    colorBlack = "#222222"
+    colorRed = "#dc3545"
+
+[permalinks]
+  "/" = "/:filename"
+
+[menu]
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume.pdf"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts"
+    weight = 2
+  [[menu.main]]
+    name = "Youtube"
+    url = "https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ"
+    weight = 3
+
+
+[markup.goldmark.renderer]
+  unsafe = true  # allow raw HTML in markdown files
