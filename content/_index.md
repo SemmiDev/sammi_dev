@@ -1,5 +1,5 @@
 +++
-title = "Me"
+title = "Sammi Aldhi Yanto"
 +++
 
 {{< figure class="avatar" src="/sam.jpg" alt="sam">}}
