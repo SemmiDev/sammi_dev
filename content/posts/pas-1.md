@@ -18,7 +18,7 @@ description = "ASD ~ Proyek Akhir Semester Bagian 1"
 **`java -jar PAS-ASD-4.jar`**
 ![how to run](/assets/asd/0.png)
 
-### [C. Demo Aplikasi]()
+## [C. Demo Aplikasi]()
 ![demo 1](/assets/asd/1.png)
 ![demo 2](/assets/asd/2.png)
 ![demo 3](/assets/asd/3.png)
