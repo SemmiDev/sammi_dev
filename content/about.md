@@ -34,7 +34,7 @@ Feel free to connect with me
 * [Telegram](https://t.me/SammiDev)
 * [Github](https://github.com/SemmiDev)
 * [Email](sammidev4@gmail.com)
-* [Linkedin](https://www.linkedin.com/)
+* [Linkedin](https://id.linkedin.com/in/sammi-aldhi-yanto-48a11a196)
 * [Instagram](https://www.instagram.com/sammidev_/)
 * [Youtube](https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ)
 * [Twitter](https://twitter.com/sammidev_?s=09)
