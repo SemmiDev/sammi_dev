@@ -9,7 +9,7 @@ description = "ASD ~ Proyek Akhir Semester Bagian 1"
 > Author: **Sammi Aldhi Yanto**\
 > Date: **Senin, 29 November 2021**
 
-## [A. Source code & Resources]() 
+## [A. Resources]() 
 - File [**Project Netbeans**](https://github.com/SemmiDev/Closest-Pair-Points/tree/main/PAS-ASD-1) di github atau bisa langsung di [**Download**](/assets/asd/PAS-ASD-1.zip)
 - File [**Jar**](https://github.com/SemmiDev/Closest-Pair-Points/blob/main/PAS-ASD-4.jar) di github atau bisa langsung di [**Download**](/assets/asd/PAS-ASD-4.jar)
 - File [**Presentasi**](https://github.com/SemmiDev/Closest-Pair-Points/blob/main/PAS-ASD-4-PPT.pdf) di github atau bisa langsung di [**Download**](/assets/asd/PAS-ASD-4-PPT.pdf)

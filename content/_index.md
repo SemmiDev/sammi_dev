@@ -6,13 +6,16 @@ title = "Sammi Aldhi Yanto"
 
 Hi folks
 
-I’m **`Sam` mi Aldhi Yanto**\
+I’m **`Sam` mi Aldhi Yanto**
+
 Judging from the photo on the right, I’m quite `handsome` right? 😎\
-Currently 2nd Year CS Undergraduate Student at [Universitas Riau](https://unri.ac.id/en/)\
-I Love **[Go](https://golang.org)** & currenly learning **[Rust](https://www.rust-lang.org)** 😊\
-Anyway, I’m now mandated to be an **teaching assistant** for [programming foundation course](https://programming-concept.netlify.app)
+Currently 2nd Year IS (Information System) Undergraduate Student at [Universitas Riau](https://unri.ac.id/en/)
+
+Mmmm... I 💝 **[Go](https://golang.org)** 😊
+
+Anyway, I’m now mandated to be an **teaching assistant** for [programming foundation course](https://programming-concept.netlify.app)\
 I also offer programming assignment service `Joki Coding`
-several programming languages that I offer.
+several programming languages that I offer:
 
 * Go
 * Java
@@ -29,7 +32,7 @@ The price depends on the complexity of the task\
 ---
 
 
-Feel free to connect with me
+Mmm Feel free to connect with me
 * [WhatsApp](https://wa.link/2gi8t7)
 * [Telegram](https://t.me/SammiDev)
 * [Github](https://github.com/SemmiDev)
@@ -39,4 +42,4 @@ Feel free to connect with me
 * [Youtube](https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ)
 * [Twitter](https://twitter.com/sammidev_?s=09)
 
-Thanks. Have a great day.
+Thanks. Have a great day

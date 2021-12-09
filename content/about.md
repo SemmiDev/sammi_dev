@@ -8,8 +8,8 @@ Hi folks
 
 I’m **`Sam` mi Aldhi Yanto**\
 Judging from the photo on the right, I’m quite `handsome` right? 😎\
-Currently 2nd Year CS Undergraduate Student at [Universitas Riau](https://unri.ac.id/en/)\
-I Love **[Go](https://golang.org)** & currenly learning **[Rust](https://www.rust-lang.org)** 😊\
+Currently 2nd Year IS[Information System] Undergraduate Student at [Universitas Riau](https://unri.ac.id/en/)\
+I 💝 **[Go](https://golang.org)** 😊\
 Anyway, I’m now mandated to be an **teaching assistant** for [programming foundation course](https://programming-concept.netlify.app)
 I also offer programming assignment service `Joki Coding`
 several programming languages that I offer.
