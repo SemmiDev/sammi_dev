@@ -12,7 +12,7 @@ googleAnalytics = ""  # add your tracking id
   favicon = "favicon.ico"  # path to a .ico to use as favicon
   logo = ""  # url or path to a logo to put in the header
   [params.footer]
-    text = "Sammi Aldhi Yanto | 2021"
+    text = "Sammi Aldhi Yanto | 2022"
     url = "https://github.com/SemmiDev/"
   [params.style]  # appearance options (can be omitted)
     fontFamily = "Inconsolata"
@@ -26,17 +26,33 @@ googleAnalytics = ""  # add your tracking id
 
 [menu]
   [[menu.main]]
-    name = "Resume"
-    url = "/resume.pdf"
+    name = "CV"
+    url = "/CV.pdf"
     weight = 1
+  [[menu.main]]
+    name = "Experience"
+    url = "/experience"
+    weight = 2
+  [[menu.main]]
+    name = "Certificate"
+    url = "/certificate"
+    weight = 3
+  [[menu.main]]
+    name = "Skill"
+    url = "/skill"
+    weight = 4
   [[menu.main]]
     name = "Posts"
     url = "/posts"
-    weight = 2
+    weight = 5
   [[menu.main]]
     name = "Youtube"
     url = "https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ"
-    weight = 3
+    weight = 6  
+  [[menu.main]]
+    name = "Service"
+    url = "/service"
+    weight = 7
 
 
 [markup.goldmark.renderer]

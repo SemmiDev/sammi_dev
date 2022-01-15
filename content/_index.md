@@ -8,31 +8,15 @@ Hi folks
 
 I’m **`Sam` mi Aldhi Yanto**
 
-Judging from the photo on the right, I’m quite `handsome` right? 😎\
-Currently 2nd Year IS (Information System) Undergraduate Student at [Universitas Riau](https://unri.ac.id/en/)
+Judging from the photo on the right, I’m quite `handsome` right? 😎 Hehehe.\
+I'm currently 2nd Year IS (Information System) Undergraduate Student at [Universitas Riau](https://unri.ac.id/en/).\
+Anyway, I'm now in 💝 with **[Go](https://golang.org)** 😊 and Cloud Native Technology Enthusiast.
 
-Mmmm... I 💝 **[Go](https://golang.org)** 😊
-
-Anyway, I’m now mandated to be an **teaching assistant** for [programming foundation course](https://programming-concept.netlify.app)\
-I also offer programming assignment service `Joki Coding`
-several programming languages that I offer:
-
-* Go
-* Java
-* Rust
-* PHP
-* C/C++
-* Python
-* JS
-* Kotlin
-
-The price depends on the complexity of the task\
-`interested?` Contact me via [WhatsApp](https://wa.link/2gi8t7)
+In my spare time I usually like to make content on my YouTube channel about programming and others.
 
 ---
 
-
-Mmm Feel free to connect with me
+Mmm Feel free to connect with me 😊
 * [WhatsApp](https://wa.link/2gi8t7)
 * [Telegram](https://t.me/SammiDev)
 * [Github](https://github.com/SemmiDev)
@@ -42,4 +26,4 @@ Mmm Feel free to connect with me
 * [Youtube](https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ)
 * [Twitter](https://twitter.com/sammidev_?s=09)
 
-Thanks. Have a great day
+Thanks. Have a great day 😎
