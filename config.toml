@@ -1,5 +1,5 @@
 title = "sammi_dev"
-baseURL = "https://sammidev.github.io/"
+baseURL = "https://semmidev.github.io/"
 theme = "researcher"
 disableKinds = ["taxonomy", "term"]
 enableEmoji = true
