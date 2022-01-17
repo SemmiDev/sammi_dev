@@ -26,31 +26,31 @@ googleAnalytics = ""  # add your tracking id
 
 [menu]
   [[menu.main]]
-    name = "CV"
+    name = ""
     url = "/CV.pdf"
     weight = 1
   [[menu.main]]
-    name = "Experience"
+    name = ""
     url = "/experience"
     weight = 2
   [[menu.main]]
-    name = "Certificate"
+    name = ""
     url = "/certificate"
     weight = 3
   [[menu.main]]
-    name = "Skill"
+    name = ""
     url = "/skill"
     weight = 4
   [[menu.main]]
-    name = "Posts"
+    name = ""
     url = "/posts"
     weight = 5
   [[menu.main]]
-    name = "Youtube"
+    name = ""
     url = "https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ"
     weight = 6  
   [[menu.main]]
-    name = "Service"
+    name = ""
     url = "/service"
     weight = 7
 
