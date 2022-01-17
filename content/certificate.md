@@ -13,6 +13,8 @@ title = "Certificate"
 ![I](/assets/certificate/sertif-git_page-0001.jpg)
 ![J](/assets/certificate/sertif-python_page-0001.jpg)
 ![K](/assets/certificate/webinar-getting-Started-with-Golang_page-0001.jpg)
+![L](/assets/certificate/Sertifikat_Partisipasi_GDSC_Sammi_Aldhi_Yanto_page-0001.jpg)
+![L](/assets/certificate/workshop-himit.jpg)
 ![L](/assets/certificate/webinar-AI_page-0001.jpg)
 ![M](/assets/certificate/webinar_page-0001.jpg)
 ![N](/assets/certificate/webinar-py_page-0001.jpg)
