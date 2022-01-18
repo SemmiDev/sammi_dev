@@ -2,14 +2,8 @@
 title = "Sammi Aldhi Yanto"
 +++
 
-
-1. [Certificate](/certificate) 
-2. [Skill](/skill) 
-3. [Experience](/experience) 
-4. [Post](/posts)
-5. [YouTube](https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ) 
-6. [Service](/service)
-7. [CV](/cv.pdf) 
+ 
+[# **My Post**](/posts)
 
 {{< figure class="avatar" src="/sam.jpg" alt="sam">}}
 
@@ -18,7 +12,6 @@ title = "Sammi Aldhi Yanto"
 Hi folks\
 nice to meet you here 😊
 
----
 
 I’m **`Sammi Aldhi Yanto`**\
 You can call me **`Sam`**\
@@ -29,6 +22,24 @@ I'm currently 2nd Year `IS` (_Information System_) Undergraduate Student at [Uni
 Anyway, I'm now in 💝 with **[Go](https://golang.org)** & `Cloud Native Technology Enthusiast`.
 
 In my spare time I usually like to make content on my YouTube channel about `Programming` (mostly `Go`), `Algorithm & Data Structure`, `Coding Problem`, `Lecture Tasks` and `etc.`
+
+---
+
+I also offer programming assignment service `Joki Coding`
+several programming languages that I offer:
+
+* Go-Lang
+* Java
+* Rust
+* PHP
+* C/C++
+* Python
+* JS
+* Kotlin
+* etc...
+
+The price depends on the complexity of the task\
+`interested?` Contact me via [WhatsApp](https://wa.link/2gi8t7) / **+6282387325971**.
 
 ---
 

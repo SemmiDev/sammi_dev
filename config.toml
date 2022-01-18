@@ -26,34 +26,29 @@ googleAnalytics = ""  # add your tracking id
 
 [menu]
   [[menu.main]]
-    name = ""
-    url = "/CV.pdf"
+    name = "CV"
+    url = "/cv"
     weight = 1
   [[menu.main]]
-    name = ""
+    name = "EXPERIENCE"
     url = "/experience"
     weight = 2
   [[menu.main]]
-    name = ""
+    name = "CERT"
     url = "/certificate"
     weight = 3
   [[menu.main]]
-    name = ""
+    name = "SKILL"
     url = "/skill"
     weight = 4
   [[menu.main]]
-    name = ""
-    url = "/posts"
+    name = "YOUTUBE"
+    url = "https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ"
     weight = 5
   [[menu.main]]
     name = ""
-    url = "https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ"
-    weight = 6  
-  [[menu.main]]
-    name = ""
-    url = "/service"
-    weight = 7
-
+    url = "/posts"
+    weight = 6
 
 [markup.goldmark.renderer]
   unsafe = true  # allow raw HTML in markdown files
