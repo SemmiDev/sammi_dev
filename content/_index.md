@@ -3,24 +3,37 @@ title = "Sammi Aldhi Yanto"
 +++
 
  
-[# **My Post**](/posts)
+[**Personal Website & Blog**](/posts)
 
 {{< figure class="avatar" src="/sam.jpg" alt="sam">}}
-
 
 Hi folks\
 nice to meet you here 😊
 
 
-I’m **`Sammi Aldhi Yanto`**\
-You can call me **`Sam`**\
-Judging from the photo on the top right, I’m quite `handsome` right? 😎 Hehehe.
+My name is **`Sammi Aldhi Yanto`** & Currently 2nd Year `IS` Undergraduate Student at [Universitas Riau](https://unri.ac.id/en/).
 
-I'm currently 2nd Year `IS` (_Information System_) Undergraduate Student at [Universitas Riau](https://unri.ac.id/en/).
-
-Anyway, I'm now in 💝 with **[Go](https://golang.org)** & `Cloud Native Technology Enthusiast`.
+Judging from the photo on the top right, I’m quite `handsome` right? 😎 Hehehe. Anyway, I'm now in 💝 with **[Go](https://golang.org)** & [**Cloud Native Technology**]().
 
 In my spare time I usually like to make content on my YouTube channel about `Programming` (mostly `Go`), `Algorithm & Data Structure`, `Coding Problem`, `Lecture Tasks` and `etc.`
+
+---
+
+**Life so far...**
+- Breathing since October 20, 2001
+- Started studying IS (Information System) in 2020
+- Gopher
+
+**Passionate about...**
+- Books
+- Coding
+- Music
+- Food
+
+**Thinking about......**
+- Cloud-Native Apps
+- Microservices
+- Rust
 
 ---
 
