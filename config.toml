@@ -35,7 +35,7 @@ googleAnalytics = ""  # add your tracking id
     weight = 2
   [[menu.main]]
     name = "CERT"
-    url = "/certificate"
+    url = "https://drive.google.com/drive/u/1/folders/1YofO6A6a3o2bLTxSryQ9S5czpkTA1B-A"
     weight = 3
   [[menu.main]]
     name = "SKILL"
