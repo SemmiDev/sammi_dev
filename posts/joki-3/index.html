@@ -1,343 +1,293 @@
-<!doctype html><html lang><head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<title>Joki Coding ~ Mahasiswa</title>
-<meta name=description content="Sofware Engineer">
-<meta name=author content="Sammi Aldhi Yanto">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel=stylesheet>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous>
-<link rel=stylesheet href=/sass/researcher.min.css>
-<link rel=icon type=image/ico href=https://sammidev.netlify.app/favicon.ico>
-</head>
-<body><div class="container mt-5">
-<nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
-<a class="navbar-brand mx-0 mr-sm-auto" href=https://sammidev.netlify.app/ title=sammi_dev>
-sammi_dev
-</a>
-<div class="navbar-nav flex-row flex-wrap justify-content-center">
-<a class="nav-item nav-link" href=/cv title=CV>
-CV
-</a>
+<!doctype html><html lang><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Joki Coding ~ Mahasiswa</title><meta name=description content="Sofware Engineer"><meta name=author content="Sammi Aldhi Yanto"><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous><link rel=stylesheet href=/sass/researcher.min.css><link rel=icon type=image/ico href=https://sammidev.netlify.app/favicon.ico></head><body><div class="container mt-5"><nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0"><a class="navbar-brand mx-0 mr-sm-auto" href=https://sammidev.netlify.app/ title=sammi_dev>sammi_dev</a><div class="navbar-nav flex-row flex-wrap justify-content-center"><a class="nav-item nav-link" href=/cv title=CV>CV</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=/experience title=EXPERIENCE>
-EXPERIENCE
-</a>
+<a class="nav-item nav-link" href=/experience title=EXPERIENCE>EXPERIENCE</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=/certificate title=CERT>
-CERT
-</a>
+<a class="nav-item nav-link" href=https://drive.google.com/drive/u/1/folders/1YofO6A6a3o2bLTxSryQ9S5czpkTA1B-A title=CERT>CERT</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=/skill title=SKILL>
-SKILL
-</a>
+<a class="nav-item nav-link" href=/skill title=SKILL>SKILL</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ title=YOUTUBE>
-YOUTUBE
-</a>
+<a class="nav-item nav-link" href=https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ title=YOUTUBE>YOUTUBE</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=/posts title>
-</a>
-</div>
-</nav>
-</div>
-<hr>
-<div id=content>
-<div class=container>
-<h2 id=problem>Problem</h2>
-<p><strong>Bikin program pake c++ dengan entity mahasiswa & nilai. Terdapat fitur <em>read</em>, <em>save</em>, <em>sorting(asc & dsc)</em>, <em>searching(by name & nim)</em></strong></p>
-<h2 id=solution>Solution</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdio.h&gt;</span><span style=color:#75715e>
-</span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdlib.h&gt;</span><span style=color:#75715e>
-</span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;string.h&gt;</span><span style=color:#75715e>
-</span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;iostream&gt;</span><span style=color:#75715e>
-</span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;string&gt;</span><span style=color:#75715e>
-</span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;algorithm&gt;</span><span style=color:#75715e>
-</span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;sstream&gt;</span><span style=color:#75715e>
-</span><span style=color:#75715e></span>
-<span style=color:#66d9ef>using</span> <span style=color:#66d9ef>namespace</span> std;
-
-<span style=color:#75715e>#define N 3
-</span><span style=color:#75715e></span>
-
-
-<span style=color:#75715e>// karena fitir gets sudah depricated, oleh karena itu diganti dengan listen input dari console dengan cara yang biasa
-</span><span style=color:#75715e>// yaitu menggunakan cin, tetapi hanya bisa listen 1 string, oleh karena itu untuk memisahkan antar nama digunakan underscore(_)
-</span><span style=color:#75715e>// dan kemudian underscore diganti dengan spasi menggunakan sebuah method khusus  
-</span><span style=color:#75715e></span>
-<span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>MHS</span>{
-    string nama; 
-    string nim;  
-} MHS;
-
-<span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>NILAI</span>{
-    <span style=color:#66d9ef>double</span> uas; 
-    <span style=color:#66d9ef>double</span> uts;
-    <span style=color:#66d9ef>double</span> tugas;
-    <span style=color:#66d9ef>double</span> absen;
-    <span style=color:#66d9ef>double</span> nAkhir; 
-    <span style=color:#66d9ef>char</span> nHuruf; 
-} NILAI;
-
- <span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>DATAMHS</span>{
-    MHS mhs;
-    NILAI nilai;
- } DATAMHS;
-
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>judul</span>();
-saveMhs()
-string underscoreToSpace(string text);
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>searchingByNIM</span>(DATAMHS dataMhs[], string matchNIM);
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>searchingByName</span>(DATAMHS dataMhs[], string matchName);
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>sortingMhs</span>(DATAMHS dataMhs[]);
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>bacaMhs</span>();
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>bacaNilai</span>(<span style=color:#66d9ef>int</span> i);
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>infoMhs</span>(<span style=color:#66d9ef>int</span> i);
-<span style=color:#66d9ef>double</span> <span style=color:#a6e22e>hitungAkhir</span>(<span style=color:#66d9ef>double</span> tugas, <span style=color:#66d9ef>double</span> absen, <span style=color:#66d9ef>double</span> uts, <span style=color:#66d9ef>double</span> uas);
-<span style=color:#66d9ef>char</span> <span style=color:#a6e22e>konversiHuruf</span>(<span style=color:#66d9ef>double</span> na);
-
-DATAMHS dataMhs[N];
-DATAMHS dataMhsTemp[N];
-
-<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>(<span style=color:#66d9ef>int</span> argc, <span style=color:#66d9ef>char</span> <span style=color:#66d9ef>const</span> <span style=color:#f92672>*</span>argv[]){
-
-    judul();    
-    bacaMhs();
-    saveMhs()
-    
-    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>){
-        infoMhs(i);
-        printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-    }
-    
-    sortingMhs(dataMhs);
-
-    string inputNama;
-    string inputNIM;
-
-    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>)
-    {
-        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Pencarian bedasarkan nama : &#34;</span>;
-        cin <span style=color:#f92672>&gt;&gt;</span> inputNama;
-        searchingByName(dataMhs, inputNama);
-        cout <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl;
-    }
-
-
-    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>)
-    {
-        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Pencarian bedasarkan NIM : &#34;</span>;
-        cin <span style=color:#f92672>&gt;&gt;</span> inputNIM;
-        searchingByNIM(dataMhs, inputNIM);
-        cout <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl;
-    }
-    
-    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
-}
-
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>saveMhs</span>() {
-    string convertNama;
-    <span style=color:#66d9ef>int</span> a_size;
-    string s_a;
-    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>)
-    {
-
-        convertNama <span style=color:#f92672>=</span> string(dataMhsTemp[i].mhs.nama)
-        <span style=color:#75715e>// a_size = sizeof(dataMhsTemp[i].mhs.nama) / sizeof(char);
-</span><span style=color:#75715e></span>        <span style=color:#75715e>// s_a = convertToString(dataMhsTemp[i].mhs.nama, a_size);
-</span><span style=color:#75715e></span>        
-        dataMhs[i].mhs.nama <span style=color:#f92672>=</span> s_a;
-        dataMhs[i].mhs.nama <span style=color:#f92672>=</span> dataMhsTemp[i].mhs.nim;
-    }
-}
-
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>judul</span>(){
-    printf(<span style=color:#e6db74>&#34;=================================================================</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t\t</span><span style=color:#e6db74> SELAMAT DATANG</span><span style=color:#ae81ff>\t\t\t</span><span style=color:#e6db74> </span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74> PROGRAM MENGHITUNG NILAI AKHIR</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74> </span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t</span><span style=color:#e6db74> MAHASISWA PENGANTAR CODING UNIVERSITAS NEGERI PADANG </span><span style=color:#ae81ff>\t</span><span style=color:#e6db74> </span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-    printf(<span style=color:#e6db74>&#34;=================================================================</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-    printf(<span style=color:#e6db74>&#34;Dibuat oleh : ADELYA AMANDA </span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);    
-}
-
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>bacaMhs</span>(){
-    <span style=color:#66d9ef>char</span> namanya[<span style=color:#ae81ff>100</span>];
-    <span style=color:#66d9ef>char</span> nimnya[<span style=color:#ae81ff>50</span>];
-
-    string nama;
-    string namawithspace;
-    string nim;
-
-    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Membaca identitas sejumlah Mahasiswa</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-    printf(<span style=color:#e6db74>&#34;========================================</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>){
-
-        printf(<span style=color:#e6db74>&#34;Masukkan NAMA Mahasiswa: &#34;</span>);
-        gets(namanya); fflush(stdin);
-        
-        printf(<span style=color:#e6db74>&#34;Masukan NIM : &#34;</span>);
-        gets(nimnya); fflush(stdin); 
-
-        strcpy(dataMhsTemp[i].mhs.nama, namanya); 
-        strcpy(dataMhsTemp[i].mhs.nama, namanya); 
-
-        <span style=color:#75715e>// cout &lt;&lt; &#34;Masukkan NAMA Mahasiswa: ( pisahkan dengan _ ) : &#34;;
-</span><span style=color:#75715e></span>        <span style=color:#75715e>// cin &gt;&gt; nama;
-</span><span style=color:#75715e></span>
-        <span style=color:#75715e>// cout &lt;&lt; &#34;Masukkan NIM : &#34;;
-</span><span style=color:#75715e></span>        <span style=color:#75715e>// cin &gt;&gt; nim;
-</span><span style=color:#75715e></span>
-        <span style=color:#75715e>// namawithspace = underscoreToSpace(nama);
-</span><span style=color:#75715e></span>        bacaNilai(i);
-    }
-}
-
-string <span style=color:#a6e22e>convertToString</span>(<span style=color:#66d9ef>char</span><span style=color:#f92672>*</span> a, <span style=color:#66d9ef>int</span> size)
-{
-    <span style=color:#66d9ef>int</span> i;
-    string s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;</span>;
-    <span style=color:#66d9ef>for</span> (i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> size; i<span style=color:#f92672>++</span>) {
-        s <span style=color:#f92672>=</span> s <span style=color:#f92672>+</span> a[i];
-    }
-    <span style=color:#66d9ef>return</span> s;
-}
-
-string <span style=color:#a6e22e>underscoreToSpace</span>(string text){
-    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> text.length(); i<span style=color:#f92672>++</span>)
-    {
-        <span style=color:#66d9ef>if</span>(text[i] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;_&#39;</span>)
-            text[i] <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39; &#39;</span>;
-    }
-    <span style=color:#66d9ef>return</span> text;
-}
-
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>bacaNilai</span>(<span style=color:#66d9ef>int</span> i){
-    <span style=color:#66d9ef>double</span> uasnya, utsnya, tugasnya, absennya, nAkhirnya;
-    <span style=color:#66d9ef>char</span> nHurufnya;
-
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Masukkan nilai UAS : &#34;</span>;
-    cin <span style=color:#f92672>&gt;&gt;</span> uasnya;
-
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Masukkan nilai UTS : &#34;</span>;
-    cin <span style=color:#f92672>&gt;&gt;</span> utsnya;
-    
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Masukkan nilai Tugas : &#34;</span>;
-    cin <span style=color:#f92672>&gt;&gt;</span> tugasnya;
-
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Masukkan nilai Absen : &#34;</span>;
-    cin <span style=color:#f92672>&gt;&gt;</span> absennya;
-
-    dataMhs[i].nilai.uas <span style=color:#f92672>=</span> uasnya; 
-    dataMhs[i].nilai.uts <span style=color:#f92672>=</span> utsnya; 
-    dataMhs[i].nilai.tugas <span style=color:#f92672>=</span> tugasnya; 
-    dataMhs[i].nilai.absen <span style=color:#f92672>=</span> absennya;
-
-    nAkhirnya <span style=color:#f92672>=</span> hitungAkhir(uasnya, utsnya, tugasnya, absennya);
-    nHurufnya <span style=color:#f92672>=</span> konversiHuruf(nAkhirnya);
-
-    dataMhs[i].nilai.nAkhir <span style=color:#f92672>=</span> nAkhirnya;
-    dataMhs[i].nilai.nHuruf <span style=color:#f92672>=</span> nHurufnya;
-    
-    cout <span style=color:#f92672>&lt;&lt;</span> endl;
-}
-
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>infoMhs</span>(<span style=color:#66d9ef>int</span> i){
-
-    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Informasi Identitas Mahasiswa</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-    printf(<span style=color:#e6db74>&#34;========================================</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
-
-    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>)
-    {
-        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nama Mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span> dataMhs[i].mhs.nama <span style=color:#f92672>&lt;&lt;</span> endl;
-        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nomor induk mahasiswa :&#34;</span> <span style=color:#f92672>&lt;&lt;</span> dataMhs[i].mhs.nim <span style=color:#f92672>&lt;&lt;</span> endl;
-        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Akhir   : &#34;</span> <span style=color:#f92672>&lt;&lt;</span> dataMhs[i].nilai.nAkhir <span style=color:#f92672>&lt;&lt;</span> endl;
-        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Huruf   : &#34;</span> <span style=color:#f92672>&lt;&lt;</span> dataMhs[i].nilai.nHuruf <span style=color:#f92672>&lt;&lt;</span> endl;
-        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;========================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
-    }
-}
-
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>searchingByName</span>(DATAMHS dataMhs[], string matchName) {
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;MATCH WITH &#34;</span> <span style=color:#f92672>+</span> matchName <span style=color:#f92672>&lt;&lt;</span> endl;
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
-    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> x <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; x <span style=color:#f92672>&lt;</span> N; x<span style=color:#f92672>++</span>){
-        <span style=color:#66d9ef>if</span> (dataMhs[x].mhs.nama.find(matchName, <span style=color:#ae81ff>0</span>) <span style=color:#f92672>!=</span> string<span style=color:#f92672>::</span>npos){
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nama Mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].mhs.nama <span style=color:#f92672>&lt;&lt;</span> endl;
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nomor induk mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].mhs.nim <span style=color:#f92672>&lt;&lt;</span> endl;
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Akhir  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].nilai.nAkhir <span style=color:#f92672>&lt;&lt;</span> endl;
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Huruf  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].nilai.nHuruf <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl; 
-        }
-    }
-}
-
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>searchingByNIM</span>(DATAMHS dataMhs[], string matchNIM) {
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;MATCH WITH &#34;</span> <span style=color:#f92672>+</span> matchNIM <span style=color:#f92672>&lt;&lt;</span> endl;
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
-    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> x <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; x <span style=color:#f92672>&lt;</span> N; x<span style=color:#f92672>++</span>){
-        <span style=color:#66d9ef>if</span> (dataMhs[x].mhs.nim.find(matchNIM, <span style=color:#ae81ff>0</span>) <span style=color:#f92672>!=</span> string<span style=color:#f92672>::</span>npos){
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nama Mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].mhs.nama <span style=color:#f92672>&lt;&lt;</span> endl;
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nomor induk mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].mhs.nim <span style=color:#f92672>&lt;&lt;</span> endl;
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Akhir  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].nilai.nAkhir <span style=color:#f92672>&lt;&lt;</span> endl;
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Huruf  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].nilai.nHuruf <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl; 
-        }
-    }
-}
-
-<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>sortingMhs</span>(DATAMHS dataMhs[]) {
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;SORTING MAHASISWA DESC BY NILAI &#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
-    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
-    <span style=color:#66d9ef>double</span> nilaiMhs[N];
-
-    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>){
-        nilaiMhs[i] <span style=color:#f92672>=</span> dataMhs[i].nilai.nAkhir;
-    }
-
-    sort(nilaiMhs, nilaiMhs <span style=color:#f92672>+</span> N, greater<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>double</span><span style=color:#f92672>&gt;</span>());
-  
-      cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Descending Sorted Array:</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>;
-    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>){
-        <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; j <span style=color:#f92672>&lt;</span> N; j<span style=color:#f92672>++</span>){
-            <span style=color:#66d9ef>if</span> (nilaiMhs[i] <span style=color:#f92672>==</span> dataMhs[j].nilai.nAkhir){
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nama Mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[j].mhs.nama <span style=color:#f92672>&lt;&lt;</span> endl;
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nomor induk mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[j].mhs.nim <span style=color:#f92672>&lt;&lt;</span> endl;
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Akhir  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[j].nilai.nAkhir <span style=color:#f92672>&lt;&lt;</span> endl;
-                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Huruf  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[j].nilai.nHuruf <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl; 
-                <span style=color:#66d9ef>break</span>;
-            }
-        }
-    }      
-}
-
-<span style=color:#66d9ef>double</span> <span style=color:#a6e22e>hitungAkhir</span>(<span style=color:#66d9ef>double</span> tugas, <span style=color:#66d9ef>double</span> absen, <span style=color:#66d9ef>double</span> uts, <span style=color:#66d9ef>double</span> uas){
-    <span style=color:#66d9ef>return</span> tugas <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.2</span> <span style=color:#f92672>+</span> absen <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.1</span> <span style=color:#f92672>+</span> uts <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.3</span> <span style=color:#f92672>+</span> uas <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.4</span>;
-}
-
-<span style=color:#66d9ef>char</span> <span style=color:#a6e22e>konversiHuruf</span>(<span style=color:#66d9ef>double</span> na){
-    <span style=color:#66d9ef>char</span> nHurufnya;
-
-    <span style=color:#66d9ef>if</span>((na <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>85.0</span>) <span style=color:#f92672>&amp;&amp;</span> (na <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>100.0</span>))
-        nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;A&#39;</span>;
-    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(na <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>70.0</span>)
-        nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;B&#39;</span>;
-    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(na <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>60.0</span>)
-        nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;C&#39;</span>;
-    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(na <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>50.0</span>)
-        nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;D&#39;</span>;
-    <span style=color:#66d9ef>else</span> nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;E&#39;</span>;
-    
-    <span style=color:#66d9ef>return</span> nHurufnya;   
-}
-</code></pre></div>
-</div>
-</div><div id=footer class=mb-5>
-<hr>
-<div class="container text-center">
-</div>
-<div class="container text-center">
-<a href=https://github.com/SemmiDev/ title="Sammi Aldhi Yanto | 2022"><small>Sammi Aldhi Yanto | 2022</small></a>
-</div>
-</div>
-</body>
-</html>
+<a class="nav-item nav-link" href=/posts title></a></div></nav></div><hr><div id=content><div class=container><h2 id=problem>Problem</h2><p><strong>Bikin program pake c++ dengan entity mahasiswa & nilai. Terdapat fitur <em>read</em>, <em>save</em>, <em>sorting(asc & dsc)</em>, <em>searching(by name & nim)</em></strong></p><h2 id=solution>Solution</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdio.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdlib.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;string.h&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;iostream&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;string&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;algorithm&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;sstream&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> <span style=color:#66d9ef>namespace</span> std;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#define N 3
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// karena fitir gets sudah depricated, oleh karena itu diganti dengan listen input dari console dengan cara yang biasa
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// yaitu menggunakan cin, tetapi hanya bisa listen 1 string, oleh karena itu untuk memisahkan antar nama digunakan underscore(_)
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// dan kemudian underscore diganti dengan spasi menggunakan sebuah method khusus  
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>MHS</span>{
+</span></span><span style=display:flex><span>    string nama; 
+</span></span><span style=display:flex><span>    string nim;  
+</span></span><span style=display:flex><span>} MHS;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>NILAI</span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>double</span> uas; 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>double</span> uts;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>double</span> tugas;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>double</span> absen;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>double</span> nAkhir; 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> nHuruf; 
+</span></span><span style=display:flex><span>} NILAI;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>DATAMHS</span>{
+</span></span><span style=display:flex><span>    MHS mhs;
+</span></span><span style=display:flex><span>    NILAI nilai;
+</span></span><span style=display:flex><span> } DATAMHS;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>judul</span>();
+</span></span><span style=display:flex><span>saveMhs()
+</span></span><span style=display:flex><span>string underscoreToSpace(string text);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>searchingByNIM</span>(DATAMHS dataMhs[], string matchNIM);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>searchingByName</span>(DATAMHS dataMhs[], string matchName);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>sortingMhs</span>(DATAMHS dataMhs[]);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>bacaMhs</span>();
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>bacaNilai</span>(<span style=color:#66d9ef>int</span> i);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>infoMhs</span>(<span style=color:#66d9ef>int</span> i);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>double</span> <span style=color:#a6e22e>hitungAkhir</span>(<span style=color:#66d9ef>double</span> tugas, <span style=color:#66d9ef>double</span> absen, <span style=color:#66d9ef>double</span> uts, <span style=color:#66d9ef>double</span> uas);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>char</span> <span style=color:#a6e22e>konversiHuruf</span>(<span style=color:#66d9ef>double</span> na);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>DATAMHS dataMhs[N];
+</span></span><span style=display:flex><span>DATAMHS dataMhsTemp[N];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>(<span style=color:#66d9ef>int</span> argc, <span style=color:#66d9ef>char</span> <span style=color:#66d9ef>const</span> <span style=color:#f92672>*</span>argv[]){
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    judul();    
+</span></span><span style=display:flex><span>    bacaMhs();
+</span></span><span style=display:flex><span>    saveMhs()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>        infoMhs(i);
+</span></span><span style=display:flex><span>        printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    sortingMhs(dataMhs);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    string inputNama;
+</span></span><span style=display:flex><span>    string inputNIM;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Pencarian bedasarkan nama : &#34;</span>;
+</span></span><span style=display:flex><span>        cin <span style=color:#f92672>&gt;&gt;</span> inputNama;
+</span></span><span style=display:flex><span>        searchingByName(dataMhs, inputNama);
+</span></span><span style=display:flex><span>        cout <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Pencarian bedasarkan NIM : &#34;</span>;
+</span></span><span style=display:flex><span>        cin <span style=color:#f92672>&gt;&gt;</span> inputNIM;
+</span></span><span style=display:flex><span>        searchingByNIM(dataMhs, inputNIM);
+</span></span><span style=display:flex><span>        cout <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>saveMhs</span>() {
+</span></span><span style=display:flex><span>    string convertNama;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> a_size;
+</span></span><span style=display:flex><span>    string s_a;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        convertNama <span style=color:#f92672>=</span> string(dataMhsTemp[i].mhs.nama)
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// a_size = sizeof(dataMhsTemp[i].mhs.nama) / sizeof(char);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#75715e>// s_a = convertToString(dataMhsTemp[i].mhs.nama, a_size);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        
+</span></span><span style=display:flex><span>        dataMhs[i].mhs.nama <span style=color:#f92672>=</span> s_a;
+</span></span><span style=display:flex><span>        dataMhs[i].mhs.nama <span style=color:#f92672>=</span> dataMhsTemp[i].mhs.nim;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>judul</span>(){
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;=================================================================</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t\t</span><span style=color:#e6db74> SELAMAT DATANG</span><span style=color:#ae81ff>\t\t\t</span><span style=color:#e6db74> </span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74> PROGRAM MENGHITUNG NILAI AKHIR</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74> </span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t</span><span style=color:#e6db74> MAHASISWA PENGANTAR CODING UNIVERSITAS NEGERI PADANG </span><span style=color:#ae81ff>\t</span><span style=color:#e6db74> </span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;=================================================================</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;Dibuat oleh : ADELYA AMANDA </span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);    
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>bacaMhs</span>(){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> namanya[<span style=color:#ae81ff>100</span>];
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> nimnya[<span style=color:#ae81ff>50</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    string nama;
+</span></span><span style=display:flex><span>    string namawithspace;
+</span></span><span style=display:flex><span>    string nim;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Membaca identitas sejumlah Mahasiswa</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;========================================</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        printf(<span style=color:#e6db74>&#34;Masukkan NAMA Mahasiswa: &#34;</span>);
+</span></span><span style=display:flex><span>        gets(namanya); fflush(stdin);
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        printf(<span style=color:#e6db74>&#34;Masukan NIM : &#34;</span>);
+</span></span><span style=display:flex><span>        gets(nimnya); fflush(stdin); 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        strcpy(dataMhsTemp[i].mhs.nama, namanya); 
+</span></span><span style=display:flex><span>        strcpy(dataMhsTemp[i].mhs.nama, namanya); 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// cout &lt;&lt; &#34;Masukkan NAMA Mahasiswa: ( pisahkan dengan _ ) : &#34;;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#75715e>// cin &gt;&gt; nama;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// cout &lt;&lt; &#34;Masukkan NIM : &#34;;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#75715e>// cin &gt;&gt; nim;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// namawithspace = underscoreToSpace(nama);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        bacaNilai(i);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>string <span style=color:#a6e22e>convertToString</span>(<span style=color:#66d9ef>char</span><span style=color:#f92672>*</span> a, <span style=color:#66d9ef>int</span> size)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> i;
+</span></span><span style=display:flex><span>    string s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> size; i<span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>        s <span style=color:#f92672>=</span> s <span style=color:#f92672>+</span> a[i];
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> s;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>string <span style=color:#a6e22e>underscoreToSpace</span>(string text){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> text.length(); i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(text[i] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;_&#39;</span>)
+</span></span><span style=display:flex><span>            text[i] <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39; &#39;</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> text;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>bacaNilai</span>(<span style=color:#66d9ef>int</span> i){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>double</span> uasnya, utsnya, tugasnya, absennya, nAkhirnya;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> nHurufnya;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Masukkan nilai UAS : &#34;</span>;
+</span></span><span style=display:flex><span>    cin <span style=color:#f92672>&gt;&gt;</span> uasnya;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Masukkan nilai UTS : &#34;</span>;
+</span></span><span style=display:flex><span>    cin <span style=color:#f92672>&gt;&gt;</span> utsnya;
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Masukkan nilai Tugas : &#34;</span>;
+</span></span><span style=display:flex><span>    cin <span style=color:#f92672>&gt;&gt;</span> tugasnya;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Masukkan nilai Absen : &#34;</span>;
+</span></span><span style=display:flex><span>    cin <span style=color:#f92672>&gt;&gt;</span> absennya;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    dataMhs[i].nilai.uas <span style=color:#f92672>=</span> uasnya; 
+</span></span><span style=display:flex><span>    dataMhs[i].nilai.uts <span style=color:#f92672>=</span> utsnya; 
+</span></span><span style=display:flex><span>    dataMhs[i].nilai.tugas <span style=color:#f92672>=</span> tugasnya; 
+</span></span><span style=display:flex><span>    dataMhs[i].nilai.absen <span style=color:#f92672>=</span> absennya;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    nAkhirnya <span style=color:#f92672>=</span> hitungAkhir(uasnya, utsnya, tugasnya, absennya);
+</span></span><span style=display:flex><span>    nHurufnya <span style=color:#f92672>=</span> konversiHuruf(nAkhirnya);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    dataMhs[i].nilai.nAkhir <span style=color:#f92672>=</span> nAkhirnya;
+</span></span><span style=display:flex><span>    dataMhs[i].nilai.nHuruf <span style=color:#f92672>=</span> nHurufnya;
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>infoMhs</span>(<span style=color:#66d9ef>int</span> i){
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Informasi Identitas Mahasiswa</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>    printf(<span style=color:#e6db74>&#34;========================================</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nama Mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span> dataMhs[i].mhs.nama <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nomor induk mahasiswa :&#34;</span> <span style=color:#f92672>&lt;&lt;</span> dataMhs[i].mhs.nim <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Akhir   : &#34;</span> <span style=color:#f92672>&lt;&lt;</span> dataMhs[i].nilai.nAkhir <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Huruf   : &#34;</span> <span style=color:#f92672>&lt;&lt;</span> dataMhs[i].nilai.nHuruf <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>        cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;========================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>searchingByName</span>(DATAMHS dataMhs[], string matchName) {
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;MATCH WITH &#34;</span> <span style=color:#f92672>+</span> matchName <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> x <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; x <span style=color:#f92672>&lt;</span> N; x<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (dataMhs[x].mhs.nama.find(matchName, <span style=color:#ae81ff>0</span>) <span style=color:#f92672>!=</span> string<span style=color:#f92672>::</span>npos){
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nama Mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].mhs.nama <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nomor induk mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].mhs.nim <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Akhir  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].nilai.nAkhir <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Huruf  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].nilai.nHuruf <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl; 
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>searchingByNIM</span>(DATAMHS dataMhs[], string matchNIM) {
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;MATCH WITH &#34;</span> <span style=color:#f92672>+</span> matchNIM <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> x <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; x <span style=color:#f92672>&lt;</span> N; x<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (dataMhs[x].mhs.nim.find(matchNIM, <span style=color:#ae81ff>0</span>) <span style=color:#f92672>!=</span> string<span style=color:#f92672>::</span>npos){
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nama Mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].mhs.nama <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nomor induk mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].mhs.nim <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Akhir  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].nilai.nAkhir <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Huruf  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[x].nilai.nHuruf <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl; 
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>sortingMhs</span>(DATAMHS dataMhs[]) {
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;SORTING MAHASISWA DESC BY NILAI &#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;===================================================================&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>double</span> nilaiMhs[N];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>        nilaiMhs[i] <span style=color:#f92672>=</span> dataMhs[i].nilai.nAkhir;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    sort(nilaiMhs, nilaiMhs <span style=color:#f92672>+</span> N, greater<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>double</span><span style=color:#f92672>&gt;</span>());
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>      cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Descending Sorted Array:</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> N; i<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; j <span style=color:#f92672>&lt;</span> N; j<span style=color:#f92672>++</span>){
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> (nilaiMhs[i] <span style=color:#f92672>==</span> dataMhs[j].nilai.nAkhir){
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nama Mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[j].mhs.nama <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nomor induk mahasiswa  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[j].mhs.nim <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Akhir  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[j].nilai.nAkhir <span style=color:#f92672>&lt;&lt;</span> endl;
+</span></span><span style=display:flex><span>                cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Nilai Huruf  : &#34;</span> <span style=color:#f92672>&lt;&lt;</span>  dataMhs[j].nilai.nHuruf <span style=color:#f92672>&lt;&lt;</span> endl <span style=color:#f92672>&lt;&lt;</span> endl; 
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }      
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>double</span> <span style=color:#a6e22e>hitungAkhir</span>(<span style=color:#66d9ef>double</span> tugas, <span style=color:#66d9ef>double</span> absen, <span style=color:#66d9ef>double</span> uts, <span style=color:#66d9ef>double</span> uas){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> tugas <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.2</span> <span style=color:#f92672>+</span> absen <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.1</span> <span style=color:#f92672>+</span> uts <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.3</span> <span style=color:#f92672>+</span> uas <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.4</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>char</span> <span style=color:#a6e22e>konversiHuruf</span>(<span style=color:#66d9ef>double</span> na){
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>char</span> nHurufnya;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span>((na <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>85.0</span>) <span style=color:#f92672>&amp;&amp;</span> (na <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>100.0</span>))
+</span></span><span style=display:flex><span>        nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;A&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(na <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>70.0</span>)
+</span></span><span style=display:flex><span>        nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;B&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(na <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>60.0</span>)
+</span></span><span style=display:flex><span>        nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;C&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(na <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>50.0</span>)
+</span></span><span style=display:flex><span>        nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;D&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> nHurufnya <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;E&#39;</span>;
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> nHurufnya;   
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></div><div id=footer class=mb-5><hr><div class="container text-center"></div><div class="container text-center"><a href=https://github.com/SemmiDev/ title="Sammi Aldhi Yanto | 2022"><small>Sammi Aldhi Yanto | 2022</small></a></div></div></body></html>

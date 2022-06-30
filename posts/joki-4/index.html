@@ -1,155 +1,105 @@
-<!doctype html><html lang><head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<title>Joki Coding ~ Matrix</title>
-<meta name=description content="Sofware Engineer">
-<meta name=author content="Sammi Aldhi Yanto">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel=stylesheet>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous>
-<link rel=stylesheet href=/sass/researcher.min.css>
-<link rel=icon type=image/ico href=https://sammidev.netlify.app/favicon.ico>
-</head>
-<body><div class="container mt-5">
-<nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
-<a class="navbar-brand mx-0 mr-sm-auto" href=https://sammidev.netlify.app/ title=sammi_dev>
-sammi_dev
-</a>
-<div class="navbar-nav flex-row flex-wrap justify-content-center">
-<a class="nav-item nav-link" href=/cv title=CV>
-CV
-</a>
+<!doctype html><html lang><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Joki Coding ~ Matrix</title><meta name=description content="Sofware Engineer"><meta name=author content="Sammi Aldhi Yanto"><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous><link rel=stylesheet href=/sass/researcher.min.css><link rel=icon type=image/ico href=https://sammidev.netlify.app/favicon.ico></head><body><div class="container mt-5"><nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0"><a class="navbar-brand mx-0 mr-sm-auto" href=https://sammidev.netlify.app/ title=sammi_dev>sammi_dev</a><div class="navbar-nav flex-row flex-wrap justify-content-center"><a class="nav-item nav-link" href=/cv title=CV>CV</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=/experience title=EXPERIENCE>
-EXPERIENCE
-</a>
+<a class="nav-item nav-link" href=/experience title=EXPERIENCE>EXPERIENCE</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=/certificate title=CERT>
-CERT
-</a>
+<a class="nav-item nav-link" href=https://drive.google.com/drive/u/1/folders/1YofO6A6a3o2bLTxSryQ9S5czpkTA1B-A title=CERT>CERT</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=/skill title=SKILL>
-SKILL
-</a>
+<a class="nav-item nav-link" href=/skill title=SKILL>SKILL</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ title=YOUTUBE>
-YOUTUBE
-</a>
+<a class="nav-item nav-link" href=https://www.youtube.com/channel/UCf9eTh_WEnl2NV2ii-F2OZQ title=YOUTUBE>YOUTUBE</a>
 <span class="nav-item navbar-text mx-1">/</span>
-<a class="nav-item nav-link" href=/posts title>
-</a>
-</div>
-</nav>
-</div>
-<hr>
-<div id=content>
-<div class=container>
-<h2 id=problem>Problem</h2>
-<p><strong>Bikin operasi perkalian matrix & matrix transpose</strong></p>
-<h2 id=solution>Solution</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#f92672>package</span> ddp2.lab06<span style=color:#f92672>;</span>
-
-<span style=color:#f92672>import</span> java.util.Scanner<span style=color:#f92672>;</span>
-
-<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MatrixOperations</span> <span style=color:#f92672>{</span>
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-
-        <span style=color:#75715e>// ORDO MATRIX
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>int</span> n <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span>
-
-        <span style=color:#75715e>// ASSIGN ORDO MATRIX DENGAN ARGUMENT YANG DI PASS USER INDEX KE 0
-</span><span style=color:#75715e></span>        n <span style=color:#f92672>=</span> Integer<span style=color:#f92672>.</span><span style=color:#a6e22e>parseInt</span><span style=color:#f92672>(</span>args<span style=color:#f92672>[</span>0<span style=color:#f92672>]);</span>
-
-        <span style=color:#75715e>// UKURAN MATRIX / ORDO HARUS DIANTARA 2 DAN 10
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>(!(</span>n <span style=color:#f92672>&gt;=</span> 2 <span style=color:#f92672>&amp;&amp;</span> n <span style=color:#f92672>&lt;=</span> 10<span style=color:#f92672>))</span> <span style=color:#f92672>{</span>
-            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;The size of the square matrix must be between 2 and 10&#34;</span><span style=color:#f92672>);</span>
-            System<span style=color:#f92672>.</span><span style=color:#a6e22e>exit</span><span style=color:#f92672>(</span>1<span style=color:#f92672>);</span>
-        <span style=color:#f92672>}</span>
-
-        <span style=color:#75715e>// SCANNER UNTUK AMBIL INPUT USER UNTUK MENGISI NILAI MATRIX
-</span><span style=color:#75715e></span>        Scanner input <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Scanner<span style=color:#f92672>(</span>System<span style=color:#f92672>.</span><span style=color:#a6e22e>in</span><span style=color:#f92672>);</span>
-
-        <span style=color:#75715e>// ENTER MATRIX 1
-</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>printf</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Enter matrix1 of size %d X %d: \n&#34;</span><span style=color:#f92672>,</span> n<span style=color:#f92672>,</span> n<span style=color:#f92672>);</span>
-        <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> matrix1 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>n<span style=color:#f92672>][</span>n<span style=color:#f92672>];</span>
-
-        <span style=color:#75715e>// LOOP [BARIS][KOLOM] SECARA SEQUENTIAL
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> matrix1<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> matrix1<span style=color:#f92672>[</span>i<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-                matrix1<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> input<span style=color:#f92672>.</span><span style=color:#a6e22e>nextInt</span><span style=color:#f92672>();</span>
-            <span style=color:#f92672>}</span>
-        <span style=color:#f92672>}</span>
-
-        <span style=color:#75715e>// ENTER MATRIX 2
-</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>printf</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Enter matrix2 of size %d X %d: \n&#34;</span><span style=color:#f92672>,</span> n<span style=color:#f92672>,</span> n<span style=color:#f92672>);</span>
-        <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> matrix2 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>n<span style=color:#f92672>][</span>n<span style=color:#f92672>];</span>
-
-
-        <span style=color:#75715e>// LOOP [BARIS][KOLOM] SECARA SEQUENTIAL
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> matrix2<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> matrix2<span style=color:#f92672>[</span>i<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-                matrix2<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> input<span style=color:#f92672>.</span><span style=color:#a6e22e>nextInt</span><span style=color:#f92672>();</span>
-            <span style=color:#f92672>}</span>
-        <span style=color:#f92672>}</span>
-
-        <span style=color:#75715e>// MULTIPLY TWO MATRIX AND PRINT THE RESULT
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> resultMatrix <span style=color:#f92672>=</span> multiplyMatrix<span style=color:#f92672>(</span>matrix1<span style=color:#f92672>,</span> matrix2<span style=color:#f92672>);</span>
-        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;\nThe multiplication result of the matrices is &#34;</span><span style=color:#f92672>);</span>
-        printResult<span style=color:#f92672>(</span>resultMatrix<span style=color:#f92672>);</span>
-
-        <span style=color:#75715e>// FIND THE TRANSPOSE OF MATRIX1 AND PRINT THE RESULT
-</span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;\nThe transpose of the matrix1 is &#34;</span><span style=color:#f92672>);</span>
-        printResult<span style=color:#f92672>(</span>transpose<span style=color:#f92672>(</span>matrix1<span style=color:#f92672>));</span>
-    <span style=color:#f92672>}</span>
-
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> <span style=color:#a6e22e>multiplyMatrix</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> m1<span style=color:#f92672>,</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> m2<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#75715e>// RESULT ARRAY
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> result <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>m1<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>][</span>m2<span style=color:#f92672>[</span>0<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>];</span>
-
-        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> m1<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> result<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-                <span style=color:#75715e>// SET result[i][j] = 0 TERLEBIH DAHULU
-</span><span style=color:#75715e></span>                result<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span>
-                <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> k <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> k <span style=color:#f92672>&lt;</span> result<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> k<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-                    <span style=color:#75715e>//        NGE LOOP BARIS &amp; NGE LOOP KOLOM
-</span><span style=color:#75715e></span>                    result<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>+=</span> m1<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>k<span style=color:#f92672>]</span> <span style=color:#f92672>*</span> m2<span style=color:#f92672>[</span>k<span style=color:#f92672>][</span>j<span style=color:#f92672>];</span>
-                <span style=color:#f92672>}</span>
-            <span style=color:#f92672>}</span>
-        <span style=color:#f92672>}</span>
-        <span style=color:#66d9ef>return</span> result<span style=color:#f92672>;</span>
-    <span style=color:#f92672>}</span>
-
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> <span style=color:#a6e22e>transpose</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> m<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#75715e>// RESULT ARRAY
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>int</span> <span style=color:#f92672>[][]</span> result <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>m<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>][</span>m<span style=color:#f92672>[</span>0<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>];</span>
-
-        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> m<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> m<span style=color:#f92672>[</span>0<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-                <span style=color:#75715e>// BARIS -&gt; KOLOM &amp; KOLOM -&gt; BARIS
-</span><span style=color:#75715e></span>                result<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> m<span style=color:#f92672>[</span>j<span style=color:#f92672>][</span>i<span style=color:#f92672>];</span>
-            <span style=color:#f92672>}</span>
-        <span style=color:#f92672>}</span>
-        <span style=color:#66d9ef>return</span> result<span style=color:#f92672>;</span>
-    <span style=color:#f92672>}</span>
-
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>printResult</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> m<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#75715e>// PRINT [BARIS][KOLOM]
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> m<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
-            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> m<span style=color:#f92672>[</span>0<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span>
-            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>printf</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;%4d &#34;</span><span style=color:#f92672>,</span> m<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]);</span>
-            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>();</span>
-        <span style=color:#f92672>}</span>
-    <span style=color:#f92672>}</span>
-<span style=color:#f92672>}</span>
-</code></pre></div>
-</div>
-</div><div id=footer class=mb-5>
-<hr>
-<div class="container text-center">
-</div>
-<div class="container text-center">
-<a href=https://github.com/SemmiDev/ title="Sammi Aldhi Yanto | 2022"><small>Sammi Aldhi Yanto | 2022</small></a>
-</div>
-</div>
-</body>
-</html>
+<a class="nav-item nav-link" href=/posts title></a></div></nav></div><hr><div id=content><div class=container><h2 id=problem>Problem</h2><p><strong>Bikin operasi perkalian matrix & matrix transpose</strong></p><h2 id=solution>Solution</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=display:flex><span><span style=color:#f92672>package</span> ddp2.lab06<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.util.Scanner<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MatrixOperations</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// ORDO MATRIX
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>int</span> n <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// ASSIGN ORDO MATRIX DENGAN ARGUMENT YANG DI PASS USER INDEX KE 0
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        n <span style=color:#f92672>=</span> Integer<span style=color:#f92672>.</span><span style=color:#a6e22e>parseInt</span><span style=color:#f92672>(</span>args<span style=color:#f92672>[</span>0<span style=color:#f92672>]);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// UKURAN MATRIX / ORDO HARUS DIANTARA 2 DAN 10
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>(!(</span>n <span style=color:#f92672>&gt;=</span> 2 <span style=color:#f92672>&amp;&amp;</span> n <span style=color:#f92672>&lt;=</span> 10<span style=color:#f92672>))</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;The size of the square matrix must be between 2 and 10&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>exit</span><span style=color:#f92672>(</span>1<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// SCANNER UNTUK AMBIL INPUT USER UNTUK MENGISI NILAI MATRIX
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        Scanner input <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Scanner<span style=color:#f92672>(</span>System<span style=color:#f92672>.</span><span style=color:#a6e22e>in</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// ENTER MATRIX 1
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>printf</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Enter matrix1 of size %d X %d: \n&#34;</span><span style=color:#f92672>,</span> n<span style=color:#f92672>,</span> n<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> matrix1 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>n<span style=color:#f92672>][</span>n<span style=color:#f92672>];</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// LOOP [BARIS][KOLOM] SECARA SEQUENTIAL
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> matrix1<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> matrix1<span style=color:#f92672>[</span>i<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                matrix1<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> input<span style=color:#f92672>.</span><span style=color:#a6e22e>nextInt</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// ENTER MATRIX 2
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>printf</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Enter matrix2 of size %d X %d: \n&#34;</span><span style=color:#f92672>,</span> n<span style=color:#f92672>,</span> n<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> matrix2 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>n<span style=color:#f92672>][</span>n<span style=color:#f92672>];</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// LOOP [BARIS][KOLOM] SECARA SEQUENTIAL
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> matrix2<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> matrix2<span style=color:#f92672>[</span>i<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                matrix2<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> input<span style=color:#f92672>.</span><span style=color:#a6e22e>nextInt</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// MULTIPLY TWO MATRIX AND PRINT THE RESULT
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> resultMatrix <span style=color:#f92672>=</span> multiplyMatrix<span style=color:#f92672>(</span>matrix1<span style=color:#f92672>,</span> matrix2<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;\nThe multiplication result of the matrices is &#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        printResult<span style=color:#f92672>(</span>resultMatrix<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// FIND THE TRANSPOSE OF MATRIX1 AND PRINT THE RESULT
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;\nThe transpose of the matrix1 is &#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        printResult<span style=color:#f92672>(</span>transpose<span style=color:#f92672>(</span>matrix1<span style=color:#f92672>));</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> <span style=color:#a6e22e>multiplyMatrix</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> m1<span style=color:#f92672>,</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> m2<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// RESULT ARRAY
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> result <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>m1<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>][</span>m2<span style=color:#f92672>[</span>0<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>];</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> m1<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> result<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e>// SET result[i][j] = 0 TERLEBIH DAHULU
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                result<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> k <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> k <span style=color:#f92672>&lt;</span> result<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> k<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                    <span style=color:#75715e>//        NGE LOOP BARIS &amp; NGE LOOP KOLOM
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                    result<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>+=</span> m1<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>k<span style=color:#f92672>]</span> <span style=color:#f92672>*</span> m2<span style=color:#f92672>[</span>k<span style=color:#f92672>][</span>j<span style=color:#f92672>];</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> result<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> <span style=color:#a6e22e>transpose</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> m<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// RESULT ARRAY
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>int</span> <span style=color:#f92672>[][]</span> result <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span><span style=color:#f92672>[</span>m<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>][</span>m<span style=color:#f92672>[</span>0<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>];</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> m<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> m<span style=color:#f92672>[</span>0<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e>// BARIS -&gt; KOLOM &amp; KOLOM -&gt; BARIS
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                result<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> m<span style=color:#f92672>[</span>j<span style=color:#f92672>][</span>i<span style=color:#f92672>];</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> result<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>printResult</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span><span style=color:#f92672>[][]</span> m<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// PRINT [BARIS][KOLOM]
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> i <span style=color:#f92672>&lt;</span> m<span style=color:#f92672>.</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> i<span style=color:#f92672>++)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>for</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span> j <span style=color:#f92672>&lt;</span> m<span style=color:#f92672>[</span>0<span style=color:#f92672>].</span><span style=color:#a6e22e>length</span><span style=color:#f92672>;</span> j<span style=color:#f92672>++)</span>
+</span></span><span style=display:flex><span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>printf</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;%4d &#34;</span><span style=color:#f92672>,</span> m<span style=color:#f92672>[</span>i<span style=color:#f92672>][</span>j<span style=color:#f92672>]);</span>
+</span></span><span style=display:flex><span>            System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span></code></pre></div></div></div><div id=footer class=mb-5><hr><div class="container text-center"></div><div class="container text-center"><a href=https://github.com/SemmiDev/ title="Sammi Aldhi Yanto | 2022"><small>Sammi Aldhi Yanto | 2022</small></a></div></div></body></html>
