@@ -1,5 +1,5 @@
 title = "sammi_dev"
-baseURL = "https://sammidev.netlify.app/"
+baseURL = "https://sammidev.codes/"
 theme = "researcher"
 disableKinds = ["taxonomy", "term"]
 enableEmoji = true
